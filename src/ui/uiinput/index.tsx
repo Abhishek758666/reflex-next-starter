@@ -1,5 +1,4 @@
 "use client";
-import { NepaliDatePicker } from "nepali-datepicker-reactjs";
 import {
   CSSProperties,
   ChangeEvent,
@@ -105,14 +104,7 @@ export default function UIInput({
       ) : null}
 
       <div className="inputfield-wrapper" style={{ position: "relative" }}>
-        {type === "date" && isNepaliDatePicker ? (
-          <NepaliDatePicker
-            className={` ${error ? "error" : ""}`}
-            onChange={handleNepaliDateChange}
-            value={value}
-            inputClassName="inputfield-input"
-          />
-        ) : (
+        {type === "date" && (
           <input
             type={type === "password" ? (show ? "text" : "password") : type}
             id={id}

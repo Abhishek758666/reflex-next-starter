@@ -1,0 +1,7 @@
+{
+  "files": [
+    "bin/cli.js",
+    "src/",
+    "index.js"
+  ]
+}

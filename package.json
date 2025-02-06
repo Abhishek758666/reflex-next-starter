@@ -1,7 +1,9 @@
 {
   "name": "reflex-next-starter",
   "version": "0.1.0",
-  "private": true,
+  "bin": {
+    "next-js-starter": "./bin/cli.js"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -12,7 +14,6 @@
     "@reduxjs/toolkit": "^2.5.1",
     "axios": "^1.7.9",
     "jodit-react": "^5.2.4",
-    "nepali-datepicker-reactjs": "^1.1.7",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
