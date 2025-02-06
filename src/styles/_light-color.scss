@@ -1,0 +1,44 @@
+$primary-color: #717fe0;
+$secondary-color: #62a4cc;
+$alpha-primary-color: #77dcfa;
+$white-color: #ffffff;
+$black-color: #333333;
+$background-color: #fff;
+$error-color: #ff6b6b;
+$success-color: #4bb64b;
+$warning-color: #daba4b;
+$bg-color: #e5f6fe;
+$border-radius: 5px;
+
+$text-white: rgba(
+  $color: $white-color,
+  $alpha: 0.7,
+);
+$text-black: rgba(
+  $color: $black-color,
+  $alpha: 1,
+);
+$text-primary: rgba(
+  $color: $primary-color,
+  $alpha: 1,
+);
+$text-error: rgba(
+  $color: $error-color,
+  $alpha: 0.7,
+);
+$text-success: rgba(
+  $color: $success-color,
+  $alpha: 0.7,
+);
+$text-warning: rgba(
+  $color: $warning-color,
+  $alpha: 0.7,
+);
+
+$border: 0.5px solid #dfdfdf;
+$border-dashed: 0.5px dashed #33333337;
+$border-black: 0.8px solid #33333337;
+$border-error: 0.5px solid $error-color;
+$border-success: 0.5px solid $success-color;
+$border-primary: 0.5px solid $primary-color;
+$box-shadow: 0 0 10px #dadada;

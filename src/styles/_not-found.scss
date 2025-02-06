@@ -1,0 +1,19 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem !important;
+  min-height: 100vh;
+  img {
+    max-width: 30rem;
+    height: auto;
+  }
+  h3 {
+    font-size: $font-size-xxl;
+  }
+  a {
+    width: 10rem !important;
+  }
+}

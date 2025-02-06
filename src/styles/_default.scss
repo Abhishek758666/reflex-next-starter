@@ -1,0 +1,56 @@
+// font size
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 1rem;
+$font-size-ll: 1.125rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 2rem;
+$font-size-xxxl: 3rem;
+$font-size-4xl: 4rem;
+$border-radius: 0;
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: $bg-color;
+  /* border-radius: 8px; */
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary-color;
+  /* border-radius: 8px; */
+}
+
+.framecontainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+
+  &-content {
+    width: 100%;
+    max-width: 1300px;
+
+    margin: auto;
+    overflow: auto;
+    padding: 1rem;
+  }
+}
+
+.tenor-super-head {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 800;
+}
+
+.my-cursive {
+  font-family: "Mrs Saint Delafield", sans-serif;
+  color: $primary-color;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}

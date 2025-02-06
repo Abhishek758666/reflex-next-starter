@@ -1,0 +1,27 @@
+.tab {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  &-labels {
+    border-bottom: $border;
+    width: 100%;
+    & button {
+      padding: 0.5rem 1rem;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-size: $font-size-md;
+    }
+    .tabActive {
+      background-color: $background-color;
+      border: $border;
+      border-bottom-color: transparent !important;
+      border-radius: $radius $radius 0 0;
+    }
+  }
+  &-content {
+    width: 100%;
+  }
+}
