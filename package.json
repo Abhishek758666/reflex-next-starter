@@ -1,9 +1,7 @@
 {
   "name": "reflex-next-starter",
   "version": "0.1.0",
-  "bin": {
-    "next-js-starter": "./bin/cli.js"
-  },
+  "bin": "./bin/cli.js",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
