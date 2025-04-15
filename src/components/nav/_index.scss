@@ -1,0 +1,87 @@
+.navbar {
+  position: relative;
+  background-color: $white-color;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 2rem;
+  width: 100%;
+
+  box-shadow: $box-shadow;
+
+  &-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    &--icon__bar,
+    &--icon__back {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $white-color;
+      border: $border;
+      border-radius: 50%;
+      color: $text-black;
+      cursor: pointer;
+    }
+    &--text {
+      color: $text-black;
+      text-transform: capitalize;
+    }
+  }
+  &-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+
+    &--item {
+      list-style: none;
+      cursor: pointer;
+
+      i {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: rgba($color: $primary-color, $alpha: 0.15);
+        color: $primary-color;
+      }
+      span {
+        font-size: 1.3rem;
+        color: $text-black;
+      }
+      &:active {
+        opacity: 0.8;
+      }
+      &__logout i {
+        background-color: rgba($color: $error-color, $alpha: 0.15) !important;
+        color: $error-color !important;
+      }
+      &__logout span {
+        color: $error-color !important;
+      }
+    }
+
+    &--profile {
+      img {
+        border-radius: 50% !important;
+        overflow: hidden;
+        width: 2.5rem;
+        height: 2.5rem;
+        object-fit: cover;
+      }
+    }
+    &--name {
+      color: $text-black;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

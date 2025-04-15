@@ -4,36 +4,24 @@
   align-items: flex-start;
   gap: 0.5rem;
   width: 100%;
+
   position: relative;
 
   &-label {
     color: $text-black;
-    font-size: $font-size-md;
-    font-weight: 600;
-    span {
-      color: red;
-    }
-  }
-  &-wrapper {
-    width: 100%;
+    font-size: 1rem;
   }
 
   &-input {
     padding: 0.5rem;
     border: $border-black;
-    border-radius: $radius !important;
-    height: 2.3rem;
+    border-radius: calc($border-radius / 2);
+    height: 2rem;
     width: 100%;
     outline: none;
-    font-size: $font-size-md;
-    // background-color: color-mix(
-    //   in srgb,
-    //   $background-color 95%,
-    //   $alpha-primary-color 5%
-    // );
-    background-color: $background-color;
+    font-size: 1rem;
+    background-color: $white-color;
     color: $text-black;
-    position: relative;
 
     &::marker {
       color: $black-color;
@@ -55,49 +43,34 @@
     }
 
     &[type="date"]::-webkit-calendar-picker-indicator {
-      border-radius: $radius;
-      cursor: pointer;
-      margin-right: 2px;
+      background-color: $primary-color;
+      border-radius: $border-radius;
     }
 
     &.error {
       border: $border-error;
-      min-width: 100%;
-    }
-  }
-  .nepali-date-picker {
-    width: 100%;
-    position: relative;
-    & calendar {
-      z-index: 19;
     }
   }
 
   &-error {
-    font-size: $font-size-md;
+    font-size: 1rem;
     color: $error-color;
-    width: 100%;
   }
 
   &-instruction {
     color: rgba($color: $text-black, $alpha: 0.5);
-    font-size: $font-size-md;
+    font-size: 1rem;
     line-height: 2rem;
     font-weight: 400;
   }
 
   i {
     position: absolute;
-    top: 0%;
+    bottom: 50%;
+    transform: translateY(50%);
     right: 1rem;
-    font-size: $font-size-md;
+    font-size: 1rem;
     color: $text-black;
     cursor: pointer;
   }
-}
-input:-internal-autofill-selected {
-  appearance: menulist-button;
-  background-image: none !important;
-  background-color: $background-color !important;
-  color: fieldtext !important;
 }

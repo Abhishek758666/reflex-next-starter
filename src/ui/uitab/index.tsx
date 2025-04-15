@@ -1,17 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 
 interface TabProps {
-  label: string;
+  label: ReactNode;
   disabled?: boolean;
-  content: React.ReactNode;
+  content: ReactNode;
 }
 
 interface TabsProps {
   tabs: TabProps[];
 }
 
-const Tabs: React.FC<TabsProps> = ({ tabs }) => {
+const UITab: React.FC<TabsProps> = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -21,7 +21,13 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
           <button
             key={index}
             disabled={tab.disabled ?? false}
-            className={index === activeTab ? "tabActive" : ""}
+            className={
+              index === activeTab
+                ? "tabActive"
+                : tab.disabled
+                ? "tabDisable"
+                : ""
+            }
             onClick={() => setActiveTab(index)}
           >
             {tab.label}
@@ -35,4 +41,4 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
   );
 };
 
-export default Tabs;
+export default UITab;

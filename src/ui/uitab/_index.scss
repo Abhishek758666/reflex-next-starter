@@ -4,23 +4,35 @@
   width: 100%;
   justify-content: flex-start;
   align-items: flex-start;
+
   &-labels {
-    border-bottom: $border;
     width: 100%;
+    border-bottom: $border;
+
     & button {
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.5rem;
       border: none;
       outline: none;
       background-color: transparent;
       font-size: $font-size-md;
+      color: $black-color;
     }
+
     .tabActive {
       background-color: $background-color;
       border: $border;
-      border-bottom-color: transparent !important;
+      border-bottom: $background-color !important;
+      border-bottom-color: 5px transparent !important;
       border-radius: $radius $radius 0 0;
+      color: $primary-color;
+    }
+
+    .tabDisable {
+      cursor: not-allowed;
+      color: rgba($color: $black-color, $alpha: 0.2);
     }
   }
+
   &-content {
     width: 100%;
   }

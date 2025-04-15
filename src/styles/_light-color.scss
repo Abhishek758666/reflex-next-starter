@@ -1,4 +1,4 @@
-$primary-color: #717fe0;
+$primary-color: #4361ee;
 $secondary-color: #62a4cc;
 $alpha-primary-color: #77dcfa;
 $white-color: #ffffff;
@@ -42,3 +42,9 @@ $border-error: 0.5px solid $error-color;
 $border-success: 0.5px solid $success-color;
 $border-primary: 0.5px solid $primary-color;
 $box-shadow: 0 0 10px #dadada;
+$box-shadow-nav: 0 4px 6px -1px #dadada;
+
+$table-head-bg: rgba(
+  $color: $primary-color,
+  $alpha: 0.1,
+);

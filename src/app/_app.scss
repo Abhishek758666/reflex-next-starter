@@ -1,14 +1,10 @@
+@import "./dashboard/dashboard";
 .home {
   height: 100vh;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  flex-direction: column;
-  &-head {
-    a {
-      color: $primary-color;
-    }
-  }
 }

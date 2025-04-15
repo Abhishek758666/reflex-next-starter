@@ -1,0 +1,19 @@
+.dashboard {
+  position: relative;
+  z-index: 1;
+  display: flex;
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    &--children {
+      width: 100%;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 1rem 2rem;
+      // overflow: hidden;
+    }
+  }
+}

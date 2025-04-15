@@ -14,19 +14,14 @@ body {
 
 $radius: 5px;
 
-.theme-wrapper.light {
-  @import "./light-color";
-  background-color: $background-color;
-  color: $text-black;
+@import "./light-color";
+@import "./default";
+@import "./not-found";
+@import "./keyframes";
+@import "../ui/ui";
+@import "../components/component";
 
-  @import "./default";
-  @import "./not-found";
-  @import "./keyframes";
-  @import "../ui/ui";
-  @import "../components/component";
-
-  @import "../app/app";
-}
+@import "../app/app";
 
 .theme-wrapper.dark {
   @import "./dark-color";
@@ -38,6 +33,5 @@ $radius: 5px;
   @import "./keyframes";
   @import "../ui/ui";
   @import "../components/component";
-
   @import "../app/app";
 }

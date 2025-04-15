@@ -2,10 +2,8 @@
 import {
   CSSProperties,
   ChangeEventHandler,
-  HTMLInputTypeAttribute,
   MouseEventHandler,
   ReactNode,
-  useState,
 } from "react";
 
 interface UICheckboxProps {

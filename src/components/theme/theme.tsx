@@ -1,4 +1,4 @@
-import { changeTheme } from "@/redux/slice/systemSlice";
+import { changeTheme } from "@/redux/slice/system.slice";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { ReactNode } from "react";
 
