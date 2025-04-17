@@ -42,7 +42,7 @@ async function main() {
     const templatePath = path.join(__dirname, "../templates");
     const projectPath = path.join(process.cwd(), projectName);
 
-    console.log("Copying template files...");
+    console.log("Copying components files...");
     fs.copySync(templatePath, projectPath, { overwrite: true });
 
     // Install additional dependencies
