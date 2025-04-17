@@ -13,7 +13,7 @@ A zero-config Next.js starter with pre-configured:
 ## Quick Start
 
 ```bash
-npx create-next-starter@latest my-app
+npx reflex-next-starter my-app
 cd my-app
 npm run dev
 ```
