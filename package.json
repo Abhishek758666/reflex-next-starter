@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "reflex-next-starter",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A Next.js starter with custom folders and files",
   "bin": {
     "create-next-starter": "./bin/cli.js"
