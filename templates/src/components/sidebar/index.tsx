@@ -73,8 +73,12 @@ const menuGroups: {
   },
 ];
 
-const getLogo = (menu: boolean) => {
-  return menu ? "/logo.svg" : "/favicon.svg";
+const getLogo = (menu: boolean, theme: "light" | "dark") => {
+  if (menu) {
+    return theme === "light" ? "/logo.svg" : "/dark-logo.svg";
+  } else {
+    return theme === "light" ? "/favicon.svg" : "/favicon-dark.svg";
+  }
 };
 
 export default function Sidebar() {
