@@ -67,9 +67,9 @@ async function main() {
     );
 
     console.log("\nSuccess! Created project at", projectPath);
-    console.log("Run the following commands to start:\n");
-    console.log(`  cd ${projectName}`);
-    console.log("  npm run dev");
+    console.log("Run the following commands to start: \n");
+    console.log(`cd ${projectName}`);
+    console.log("npm run dev");
   } catch (error) {
     console.error("Error:", error.message);
     process.exit(1);
