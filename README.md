@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Create Next Starter
 
-## Getting Started
+A zero-config Next.js starter with pre-configured:
 
-First, run the development server:
+- Redux Toolkit + Persist
+- TypeScript
+- Essential UI components
+- Axios API layer
+- ESLint setup
+- Jodit WYSIWYG editor
+- Toast notifications
+
+## Quick Start
 
 ```bash
+npx create-next-starter@latest my-app
+cd my-app
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Note**: For optimal performance, use App Router and installing the [SCSS compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) in VS Code for CSS preprocessing.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Pre-installed
 
-## Learn More
+- ✅ Next.js 14 (TypeScript)
+- ✅ Redux Toolkit with SSR support
+- ✅ Redux Persist for state hydration
+- ✅ Axios with interceptors
+- ✅ Jodit React WYSIWYG
+- ✅ React Toastify notifications
+- ✅ Zod validation
 
-To learn more about Next.js, take a look at the following resources:
+### Folder Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/              # Next.js 14 App Router
+│   ├── (auth)/       # Route groups example
+│   ├── api/          # API routes
+│   └── layout.tsx    # Root layout
+├── components/       # Reusable UI
+├── hooks/            # Custom hooks
+├── lib/
+│   ├── api/          # Axios instances
+│   └── redux/        # Store setup
+├── styles/           # Global CSS
+└── utils/            # Helpers & validators
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠 Customization
 
-## Deploy on Vercel
+### Override Templates
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Clone the repo and modify files in `/templates` before publishing your own version.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Available Flags
+
+```bash
+npx create-next-starter@latest my-app \
+  --no-tailwind \    # Disable Tailwind
+  --no-redux         # Skip Redux setup
+  --turbo            # Enable Turbopack
+  --pages            # Use Pages Router instead
+```
+
+## 📦 What's Installed
+
+| Package            | Purpose          |
+| ------------------ | ---------------- |
+| `@reduxjs/toolkit` | State management |
+| `redux-persist`    | Session storage  |
+| `jodit-react`      | Rich text editor |
+| `react-toastify`   | Notifications    |
+| `zod`              | Form validation  |
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Add your improvements to `/templates`
+3. Submit a PR with changes
+
+## License
+
+MIT © Abhishek Khati

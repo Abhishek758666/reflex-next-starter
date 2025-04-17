@@ -2416,7 +2416,6 @@ body {
   font-size: 1rem;
   padding: 0.9rem 2rem;
   list-style: none;
-  transition: 0.3s ease all;
   text-transform: uppercase;
   background-color: #f6f7fa;
   font-weight: 500;
@@ -5194,7 +5193,6 @@ body {
   font-size: 1rem;
   padding: 0.9rem 2rem;
   list-style: none;
-  transition: 0.3s ease all;
   text-transform: uppercase;
   background-color: #232323;
   font-weight: 500;
