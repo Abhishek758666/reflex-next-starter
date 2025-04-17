@@ -2,12 +2,16 @@
 import { execa } from "execa";
 import path from "path";
 import fs from "fs-extra";
+import { fileURLToPath } from "url"; // This was missing
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const projectName = process.argv[2];
 
 if (!projectName) {
   console.error("Please specify the project name:");
-  console.log("  npx create-reflex-starter <project-name>");
+  console.log("  npx reflex-next-starter <project-name>");
   process.exit(1);
 }
 
@@ -41,7 +45,7 @@ async function main() {
     console.log("Copying template files...");
     fs.copySync(templatePath, projectPath, { overwrite: true });
 
-    // Install additional dependencies (example: Redux)
+    // Install additional dependencies
     console.log("Installing additional dependencies...");
     await execa(
       "npm",
