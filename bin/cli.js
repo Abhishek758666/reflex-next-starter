@@ -15,14 +15,22 @@ async function main() {
   try {
     // Create Next.js app
     console.log("Creating Next.js app...");
-    await execa("npx", [
-      "create-next-app@latest",
-      projectName,
-      "--typescript",
-      "--no-tailwind",
-      "--src-dir",
-      "-y",
-    ]);
+    await execa(
+      "npx",
+      [
+        "create-next-app@latest",
+        projectName,
+        "--typescript",
+        "--no-tailwind",
+        "--src-dir",
+        "--no-turbo",
+        "--eslint",
+        "--no-import-alias",
+        "-y",
+      ],
+      { stdio: "inherit" }
+    );
+
     console.log("Next.js app created");
 
     // Copy templates
