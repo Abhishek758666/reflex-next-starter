@@ -1,29 +1,69 @@
 #!/usr/bin/env node
+import { execa } from "execa";
+import path from "path";
+import fs from "fs-extra";
 
-const { execSync } = require("child_process");
+// const execa = require("execa");
+// const path = require("path");
+// const fs = require("fs-extra");
 
-const runCommnad = (command) => {
+const projectName = process.argv[2];
+
+if (!projectName) {
+  console.error("Please specify the project name:");
+  console.log("  npx create-reflex-starter <project-name>");
+  process.exit(1);
+}
+
+async function main() {
   try {
-    execSync(`${command}`, { stdio: "inherit" });
+    // Create Next.js app
+    console.log("Creating Next.js app...");
+    await execa("npx", [
+      "create-next-app@latest",
+      projectName,
+      "--typescript",
+      "--no-tailwind",
+      "--src-dir",
+      "-y",
+    ]);
+
+    // Copy templates
+    const templatePath = path.join(__dirname, "../templates");
+    const projectPath = path.join(process.cwd(), projectName);
+
+    console.log("Copying template files...");
+    fs.copySync(templatePath, projectPath, { overwrite: true });
+
+    // Install additional dependencies (example: Redux)
+    console.log("Installing additional dependencies...");
+    await execa(
+      "npm",
+      [
+        "install",
+        "redux",
+        "react-redux",
+        "@reduxjs/toolkit",
+        "axios",
+        "jodit-react",
+        "react-toastify",
+        "redux-persist",
+        "zod",
+      ],
+      {
+        cwd: projectPath,
+        stdio: "inherit",
+      }
+    );
+
+    console.log("\nSuccess! Created project at", projectPath);
+    console.log("Run the following commands to start:\n");
+    console.log(`  cd ${projectName}`);
+    console.log("  npm run dev");
   } catch (error) {
-    console.error(`failed to execute command : ${command} ,${error}`);
-    return false;
+    console.error("Error:", error.message);
+    process.exit(1);
   }
-  return true;
-};
+}
 
-const repoName = process.argv[2];
-const gitCheckOutCommand = `git clone --depth 1 https://github.com/Abhishek758666/reflex-next-starter.git ${repoName}`;
-const installDepsCommand = `cd ${repoName} && npm install`;
-
-console.log(`clonning repo with name ${repoName}`);
-
-const checkedOut = runCommnad(gitCheckOutCommand);
-if (!checkedOut) process.exit(-1);
-
-console.log(`installing dependencies for ${repoName}`);
-const installedDeps = runCommnad(installDepsCommand);
-if (!installedDeps) process.exit(-1);
-
-console.log(`Follow command to start`);
-console.log(`cd ${repoName} && npm start`);
+main();

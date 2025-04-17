@@ -1,0 +1,155 @@
+.selectfield {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+
+  position: relative;
+
+  &-instruction {
+    color: rgba($color: $text-black, $alpha: 0.5);
+    font-size: $font-size-md;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+
+  &-label {
+    color: $text-black;
+    font-size: $font-size-md;
+    font-weight: 600;
+  }
+
+  &-wrapper {
+    height: 2.5rem;
+    width: 100%;
+    overflow-y: visible;
+  }
+
+  &-display {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: $border-black;
+    border-radius: $radius;
+    height: 100%;
+    outline: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    &--prefix {
+      font-size: $font-size-md;
+      color: $text-black;
+    }
+    &--value {
+      color: $text-black;
+      font-size: $font-size-md;
+    }
+    &--arrow {
+      font-size: $font-size-md;
+      color: $text-black;
+    }
+
+    &:focus {
+      border: $border-primary;
+    }
+
+    &.error {
+      border: $border-error;
+    }
+  }
+  &-search {
+    padding: 0.5rem 1rem;
+    border: $border-primary;
+    background-color: $white-color;
+    // border-radius: calc($border-radius / 2);
+    height: 100%;
+
+    outline: none;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 95%;
+    }
+    &--prefix {
+      font-size: 1.4rem;
+      color: $text-black;
+    }
+    &--input {
+      all: unset;
+      width: 100%;
+      font-size: $font-size-md;
+      color: rgba($color: $black-color, $alpha: 0.7);
+
+      &::placeholder {
+        color: $text-black;
+      }
+    }
+    &--arrow {
+      font-size: $font-size-md;
+      cursor: pointer;
+      color: $text-black;
+    }
+
+    &.error {
+      border: $border-error;
+    }
+  }
+
+  &-options {
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+
+    width: 100%;
+    max-height: 40vh;
+    overflow: auto;
+    background: $white-color;
+    border-radius: $radius;
+    border: $border;
+
+    &--item {
+      padding: 0.7rem;
+      border-bottom: 0.1rem solid rgba($color: $black-color, $alpha: 0.05);
+      cursor: pointer;
+      color: $text-black;
+      font-size: $font-size-md;
+
+      &.selected {
+        background-color: rgba($color: $primary-color, $alpha: 0.1);
+      }
+      &:hover {
+        background-color: rgba($color: $black-color, $alpha: 0.05);
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &-blank {
+    font-size: $font-size-md;
+    text-align: center;
+    padding: 1rem;
+    color: $text-black;
+  }
+
+  &-error {
+    font-size: $font-size-md;
+    color: $error-color;
+  }
+}

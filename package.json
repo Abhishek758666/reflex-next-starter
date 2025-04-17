@@ -1,54 +1,22 @@
 {
   "name": "reflex-next-starter",
-  "version": "0.1.1",
-  "bin": "./bin/cli.js",
+  "version": "1.0.0",
+  "description": "A Next.js starter with custom folders and files",
+  "bin": {
+    "create-next-starter": "./bin/cli.js"
+  },
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "Abhishek Khati",
+  "license": "MIT",
   "dependencies": {
-    "@reduxjs/toolkit": "^2.5.1",
-    "axios": "^1.7.9",
-    "jodit-react": "^5.2.4",
-    "next": "15.1.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-redux": "^9.2.0",
-    "react-toastify": "^11.0.3",
-    "redux-persist": "^6.0.0",
-    "sharp": "^0.33.5",
-    "zod": "^3.24.1"
+    "execa": "^6.1.0",
+    "fs-extra": "^11.3.0"
   },
-  "devDependencies": {
-    "@chromatic-com/storybook": "^3.2.6",
-    "@eslint/eslintrc": "^3",
-    "@storybook/addon-essentials": "^8.6.6",
-    "@storybook/addon-onboarding": "^8.6.6",
-    "@storybook/blocks": "^8.6.6",
-    "@storybook/experimental-addon-test": "^8.6.6",
-    "@storybook/experimental-nextjs-vite": "^8.6.6",
-    "@storybook/react": "^8.6.6",
-    "@storybook/test": "^8.6.6",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@vitest/browser": "^3.0.8",
-    "@vitest/coverage-v8": "^3.0.8",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.6",
-    "eslint-plugin-storybook": "^0.11.4",
-    "playwright": "^1.51.0",
-    "storybook": "^8.6.6",
-    "typescript": "^5",
-    "vitest": "^3.0.8"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
-  }
+  "files": [
+    "bin",
+    "templates"
+  ]
 }
