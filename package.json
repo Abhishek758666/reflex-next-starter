@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "reflex-next-starter",
   "version": "1.0.0",
   "description": "A Next.js starter with custom folders and files",

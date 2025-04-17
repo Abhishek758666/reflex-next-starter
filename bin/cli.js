@@ -3,10 +3,6 @@ import { execa } from "execa";
 import path from "path";
 import fs from "fs-extra";
 
-// const execa = require("execa");
-// const path = require("path");
-// const fs = require("fs-extra");
-
 const projectName = process.argv[2];
 
 if (!projectName) {
@@ -27,8 +23,10 @@ async function main() {
       "--src-dir",
       "-y",
     ]);
+    console.log("Next.js app created");
 
     // Copy templates
+    console.log("Generating components...");
     const templatePath = path.join(__dirname, "../templates");
     const projectPath = path.join(process.cwd(), projectName);
 
